@@ -13,6 +13,12 @@ class Dev < ActiveRecord::Base
             freebie.dev_id = dev.id
             freebie.save
         end
+        # or
+        # if self.received_one?(freebie.item_name)
+        #     freebie.update({dev_id: friend_dev.id})
+        # else
+        #     "That don belong to you!!!"
+        # end
 
         
     end
